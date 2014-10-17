@@ -1,4 +1,4 @@
-class UserPolicy
+class UserPolicy < ApplicationPolicy
   attr_reader :current_user, :model
 
   def initialize(current_user, model)
@@ -21,6 +21,15 @@ class UserPolicy
   def destroy?
     return false if @current_user == @user
     @current_user.admin?
+  end
+
+  def rails_admin?(action)
+    case action
+    when :destroy, :new
+      false
+    else
+      super
+    end
   end
 
 end

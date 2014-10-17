@@ -1,15 +1,16 @@
 !!!
 %html
   %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'Stock Market Simulator'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Stock Market Simulator'}"}
+    %meta{name: "description", content: "#{content_for?(:description) ? yield(:description) : 'Stock Market Simulator'}"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     %header
       = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
+    %main{role: "main"}
+      #flash_messages
+        = flash_messages(:close, :fade, :heading, :block, :html)
       = yield
