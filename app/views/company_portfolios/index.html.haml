@@ -1,0 +1,17 @@
+%h1 Listing company_portfolios
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @company_portfolios.each do |company_portfolio|
+    %tr
+      %td= link_to 'Show', company_portfolio
+      %td= link_to 'Edit', edit_company_portfolio_path(company_portfolio)
+      %td= link_to 'Destroy', company_portfolio, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Company portfolio', new_company_portfolio_path

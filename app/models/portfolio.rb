@@ -10,4 +10,10 @@
 #
 
 class Portfolio < ActiveRecord::Base
+  validates_presence_of :portfolio_name
+  validates_uniqueness_of :portfolio_name
+
+  def display_name
+    portfolio_name
+  end
 end

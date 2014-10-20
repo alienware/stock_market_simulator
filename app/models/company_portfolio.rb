@@ -13,4 +13,8 @@ class CompanyPortfolio < ActiveRecord::Base
   belongs_to :portfolio
   belongs_to :company
   counter_culture :company
+
+  def display_name
+    portfolio.display_name + ' | ' + company.display_name
+  end
 end

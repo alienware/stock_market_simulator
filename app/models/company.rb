@@ -15,4 +15,8 @@ class Company < ActiveRecord::Base
   has_many :portfolios, through: :company_portfolios
   has_many :company_owners
   has_many :owners, through: :company_owners, source: :user
+
+  def display_name
+    company_name
+  end
 end

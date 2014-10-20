@@ -1,0 +1,53 @@
+/**** BASE ****/
+a {
+  text-decoration: none !important;
+}
+
+/**** LAYOUT ****/
+.list-inline > li {
+  padding: 0 10px 0 0;
+}
+.container-pad {
+  padding: 30px 15px;
+}
+
+
+/**** MODULE ****/
+.bgc-fff {
+  background-color: #fff!important;
+}
+.box-shad {
+  -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+  box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+.brdr {
+  border: 1px solid #ededed;
+}
+
+/* Font changes */
+.fnt-smaller {
+  font-size: .9em;
+}
+.fnt-lighter {
+  color: #bbb;
+}
+
+
+/**** MEDIA QUERIES ****/
+@media only screen and (max-width: 991px) {
+  #company-listings .company-listing {
+    padding: 5px!important;
+  }
+  #company-listings .company-listing a {
+    margin: 0;
+  }
+  #company-listings .company-listing .media-body {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #company-listings .company-listing img {
+    max-width: 180px;
+  }
+}

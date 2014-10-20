@@ -1,0 +1,17 @@
+%h1 Listing purchased_shares
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @purchased_shares.each do |purchased_share|
+    %tr
+      %td= link_to 'Show', purchased_share
+      %td= link_to 'Edit', edit_purchased_share_path(purchased_share)
+      %td= link_to 'Destroy', purchased_share, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Purchased share', new_purchased_share_path

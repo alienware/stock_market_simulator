@@ -1,0 +1,17 @@
+%h1 Listing wishlist_shares
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @wishlist_shares.each do |wishlist_share|
+    %tr
+      %td= link_to 'Show', wishlist_share
+      %td= link_to 'Edit', edit_wishlist_share_path(wishlist_share)
+      %td= link_to 'Destroy', wishlist_share, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Wishlist share', new_wishlist_share_path

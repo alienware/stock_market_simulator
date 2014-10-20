@@ -1,0 +1,2 @@
+module PurchasedSharesHelper
+end

@@ -6,7 +6,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
+# gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
@@ -25,6 +25,8 @@ gem 'rails_admin'
 gem 'rails_admin_pundit', github: 'sudosu/rails_admin_pundit'
 gem 'paper_trail', '~> 3.0.6'
 gem 'bootstrap_flash_messages', '~> 1.0.0'
+gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
+gem 'rabl-rails'
 
 group :development do
   gem 'better_errors'

@@ -1,0 +1,27 @@
+.container-fluid
+  #company-listings.container.container-pad
+    .row
+      .col-md-12
+        %h1 Company listings
+        %p Find out which companies are making it big on the market
+    .row
+      - @companies.each do |company|
+        .col-sm-6
+          .brdr.bgc-fff.box-shad.company-listing
+            .media
+              .pull-left
+                %img.img-responsive{alt: "company-logo", src: Faker::Company.logo}/
+              .clearfix.visible-sm
+              .media-body.fnt-smaller
+                %h4.media-heading
+                  = company.company_name
+                  %small.pull-right
+                    = cash_in_rupees(company.company_cash)
+
+                = Faker::Company.catch_phrase
+
+                %p.hidden-xs
+                  = Faker::Company.bs
+                %span.fnt-smaller.fnt-lighter.fnt-arial
+                  Courtesy of HS Fox  Roach-Chestnut Hill
+                  Evergreen

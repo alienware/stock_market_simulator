@@ -14,5 +14,14 @@
 
 FactoryGirl.define do
   factory :company do
+    company_name Faker::Company.name
+    company_cash Random.rand(1000000.00..9999999999.00)
+
+    after :create do |company|
+      [*1..3].sample.times do
+        company.owners << FactoryGirl.create(:user)
+      end
+    end
+
   end
 end
